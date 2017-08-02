@@ -1,0 +1,20 @@
+<div class="hana-notification">
+    <span 
+        *ngIf="item.icon !== 'bare'"
+        class="icon"
+        [ngClass]="{
+            'alert': item.type === 'alert',
+            'error': item.type === 'error',
+            'warn': item.type === 'warn',
+            'success': item.type === 'success',
+            'info': item.type === 'info',
+            'bare': item.type === 'bare',
+            'rtl-mode': rtl
+        }"
+        [innerHTML]="safeSvg">
+    </span>
+    <div 
+        class="content">
+        {{item.content}}
+    </div>
+</div>

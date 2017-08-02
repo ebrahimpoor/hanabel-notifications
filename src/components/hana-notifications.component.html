@@ -1,0 +1,16 @@
+<div *ngIf="notifications.length > 0" class="hana-notifications">
+    <notification-component
+        *ngFor="let a of notifications; let i = index"
+        [item]="a"
+        [timeOut]="timeOut"
+        [clickToClose]="clickToClose"
+        [maxLength]="maxLength"
+        [showProgressBar]="showProgressBar"
+        [pauseOnHover]="pauseOnHover"
+        [theClass]="theClass"
+        [rtl]="rtl"
+        [animate]="animate"
+        [position]="i"
+        >
+    </notification-component>
+</div>
